@@ -14,8 +14,8 @@ spec:
     spec:
       containers:
       - name: lms-v2
-        image: lms:v2
-        imagePullPolicy: Never
+        image: kavyathatavarthi/lms:v2
+        imagePullPolicy: Always
         ports:
         - containerPort: 3000
 
