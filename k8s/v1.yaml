@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: lms-v1
-        image: <your-dockerhub>/lms:v1
+        image: kavyathatavarthi/lms:v1
         ports:
         - containerPort: 3000
 ---
