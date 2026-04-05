@@ -12,11 +12,21 @@ function searchNote() {
     display(filtered);
 }
 
+function deleteNote(index) {
+    notes.splice(index, 1);
+    display(notes);
+}
+
 function display(data) {
     let list = document.getElementById("list");
     list.innerHTML = "";
 
-    data.forEach(n => {
-        list.innerHTML += `<li>${n}</li>`;
+    data.forEach((n, i) => {
+        list.innerHTML += `
+            <li>
+                ${n}
+                <button onclick="deleteNote(${i})">Delete</button>
+            </li>
+        `;
     });
 }
