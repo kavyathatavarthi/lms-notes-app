@@ -1,17 +1,46 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>LMS v1</title>
+    <title>LMS v3</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #f4f4f4;
+            text-align: center;
+        }
+
+        input, button {
+            padding: 10px;
+            margin: 5px;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        li {
+            background: white;
+            margin: 5px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
 </head>
 <body>
 
-<h1>LMS v1 - Add Notes</h1>
+<h1>LMS v3 - Advanced Notes</h1>
 
 <input id="note" placeholder="Enter note">
 <button onclick="addNote()">Add</button>
-<h3>Search Notes</h3>
+
+<br>
+
 <input id="search" placeholder="Search">
 <button onclick="searchNote()">Search</button>
+
+<br>
+
+<button onclick="downloadNotes()">Download Notes</button>
 
 <ul id="list"></ul>
 
