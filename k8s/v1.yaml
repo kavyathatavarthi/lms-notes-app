@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: lms-v1
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: lms-v1
+  template:
+    metadata:
+      labels:
+        app: lms-v1
+    spec:
+      containers:
+      - name: lms-v1
+        image: <your-dockerhub>/lms:v1
+        ports:
+        - containerPort: 3000
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: lms-v1-service
+spec:
+  type: NodePort
+  selector:
+    app: lms-v1
+  ports:
+    - port: 3000
+      targetPort: 3000
+      nodePort: 30001
