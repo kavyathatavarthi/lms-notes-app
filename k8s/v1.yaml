@@ -14,9 +14,11 @@ spec:
     spec:
       containers:
       - name: lms-v1
-        image: kavyathatavarthi/lms:v1
+        image: lms:v1
+        imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 3000
+
 ---
 apiVersion: v1
 kind: Service
