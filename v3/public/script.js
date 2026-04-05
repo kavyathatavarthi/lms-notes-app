@@ -39,7 +39,6 @@ function display(data) {
     });
 }
 
-
 function downloadNotes() {
     let blob = new Blob([notes.join("\n")], { type: "text/plain" });
     let a = document.createElement("a");
